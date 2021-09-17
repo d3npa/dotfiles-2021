@@ -13,7 +13,8 @@ do
 done &
 
 # launch some programs
+(sleep 3 ; fcitx5) &
+picom &
 xss-lock slock &
 start-pulseaudio-x11 &
-fcitx5 &
 syncthing & 
