@@ -11,6 +11,5 @@ export XMODIFIERS='@im=fcitx'
 
 export EDITOR="$(which nvim)"
 export BROWSER="$(which firefox)"
-export VAGRANT_DEFAULT_PROVIDER='libvirt'
 
 source "$HOME/.cargo/env"
