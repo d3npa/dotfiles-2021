@@ -1,4 +1,4 @@
 #!/usr/bin/env zsh
 
-killall syncthing
-killall fcitx5
+pkill syncthing
+pkill fcitx5

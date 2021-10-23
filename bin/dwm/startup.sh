@@ -2,8 +2,10 @@
 
 # finish setup
 xrdb -merge $HOME/.Xresources
-$HOME/.fehbg
+xss-lock slock &
+picom &
 sct 5500
+$HOME/.fehbg
 
 # dwm bar status
 BAR_PROGRAM="$HOME/bin/dwm/dwmbar.py"
@@ -13,8 +15,5 @@ do
 done &
 
 # launch some programs
-(sleep 3 ; fcitx5) &
-picom &
-xss-lock slock &
-start-pulseaudio-x11 &
 syncthing & 
+fcitx5 &

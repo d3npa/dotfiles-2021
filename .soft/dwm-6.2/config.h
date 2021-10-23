@@ -53,9 +53,9 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_gray, "-sb", col_bg, "-sf", col_fg, NULL };
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 static const char *termcmd[]  = { "alacritty", NULL}; //{ "st", NULL };
-static const char *upvol[]   = { "amixer", "set", "Master", "5%+", NULL };
-static const char *downvol[] = { "amixer", "set", "Master", "5%-", NULL };
-static const char *mutevol[] = { "amixer", "set", "Master", "toggle", NULL };
+static const char *upvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL };
+static const char *downvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL };
+static const char *mutevol[] = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
 static const char *upbright[] = { "doas", "light", "-A", "5", NULL };
 static const char *downbright[] = { "doas", "light", "-U", "5", NULL };
 

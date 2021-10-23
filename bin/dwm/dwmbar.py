@@ -4,9 +4,9 @@ import time
 import subprocess
 
 def volume():
-    a = subprocess.run(['amixer', 'sget', 'Master'], capture_output=True)
+    a = subprocess.run(['pactl', 'get-sink-volume', '@DEFAULT_SINK@'], capture_output=True)
     out = a.stdout.decode('utf-8')
-    vol = out.split('\n')[4].split()[3][1:-1]
+    vol = out.split('/')[1].strip()
     return vol
 
 def battery():
